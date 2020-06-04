@@ -57,7 +57,7 @@ export class Search extends Component {
         //console.log("In else");
         return (
           <h2>
-            {this.state.origin} --> {this.state.destination} -->{" "}
+            {this.state.origin} --> {this.state.destination} -->
             {this.state.origin}
           </h2>
         );
@@ -179,6 +179,7 @@ export class Search extends Component {
                       margin: "5px 0px",
                     }}
                     placeholder="Enter origin"
+                    required
                     onChange={this.handleChange}
                   />
                 </div>
@@ -194,6 +195,7 @@ export class Search extends Component {
                     }}
                     placeholder="Enter destination"
                     onChange={this.handleChange}
+                    required
                   />
                 </div>
                 <div>
@@ -208,6 +210,7 @@ export class Search extends Component {
                     }}
                     placeholder="Enter Departure Date"
                     onChange={this.handleChange}
+                    required
                   />
                 </div>
                 <div>
@@ -256,6 +259,8 @@ export class Search extends Component {
                     }}
                     placeholder="Enter origin"
                     onChange={this.handleChange}
+                    required
+                    className="origin_return"
                   />
                 </div>
                 <div>
@@ -270,6 +275,8 @@ export class Search extends Component {
                     }}
                     placeholder="Enter destination"
                     onChange={this.handleChange}
+                    required
+                    className="destination_return"
                   />
                 </div>
                 <div>
@@ -284,6 +291,8 @@ export class Search extends Component {
                     }}
                     placeholder="Enter Departure Date"
                     onChange={this.handleChange}
+                    required
+                    className="dept_date_return"
                   />
                 </div>
                 <div>
@@ -298,6 +307,7 @@ export class Search extends Component {
                     }}
                     placeholder="Enter Return Date"
                     onChange={this.handleChange}
+                    className="arr_date_return"
                   />
                 </div>
                 <div>
@@ -312,6 +322,7 @@ export class Search extends Component {
                     }}
                     placeholder="No Of Passengers"
                     onChange={this.handleChange}
+                    className="passengers_return"
                   />
                 </div>
                 <div>
@@ -328,6 +339,7 @@ export class Search extends Component {
                     }}
                     placeholder="Submit"
                     onClick={this.handleSubmit}
+                    className="submit_return"
                   />
                 </div>
               </form>
@@ -348,7 +360,7 @@ export class Search extends Component {
           </div>
         </div>
 
-        <div style={display_text}>
+        <div style={display_text} className="results">
           <div style={{ float: "left", width: "70%" }}>
             {this.destinationChecker()}
           </div>
